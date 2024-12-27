@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra Papel Tesoura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <br><br>
+    <section id="game">
+        <header>
+            <h1>Pedra - Papel - Tesoura</h1>
+       
+            <h3>Pontue e vença o computador, se divirta!</h3>
+            <br><br>
+        </header>
+
+        <div id="choices">
+
+            <button onclick="playGame('Pedra')">👊</button>
+            <button onclick="playGame('Papel')">🖐</button>
+            <button onclick="playGame('Tesoura')">✌️</button>
+        </div>
+        <br>
+
+        <div id="playerDisplay"> Jogador👩🏻🧑🏻: </div><br>
+        <div id="computerDisplay"> Computador💻: </div><br>
+        <div id="resultDisplay"> </div>
+
+        <section class="scoreboard">
+            <div class="scoreDisplay">🏆 Jogador:
+                <span id="playerScoreDisplay">0</span>
+            </div>
+            <div class="scoreDisplay">💻 Computador:
+                <span id="computerScoreDisplay">0</span>
+            </div>
+        </section>
+        <div id="buttons2">
+        <button id="resetButton" onclick="resetGame()">Reiniciar Jogo</button>
+        <button id="DarkMode"  onclick="DarkMode()">🌙 Modo Escuro</button>
+        </div>
+
+      
+    </section>
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

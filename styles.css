@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk";
+}
+
+body {
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e2a38, #3b4f63);
+}
+
+h1 {
+    font-size: 3rem;
+    color: hsl(0, 0%, 20%);
+
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+h3 {
+    color: hsl(0, 0%, 20%);
+}
+
+#game {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    color: #2b3e50;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px; 
+}
+
+.choices {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+button {
+    font-size: 4.5rem;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 50%;
+    background: hsl(211, 38%, 24%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: hsl(199, 97%, 42%);
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+#buttons2 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#playerDisplay,
+#computerDisplay {
+    font-size: 2rem;
+}
+
+#resultDisplay {
+    font-size: 2rem;
+    margin: 30px 0;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+.scoreDisplay {
+    font-size: 1.5rem;
+}
+
+.greenText,
+#playerScoreDisplay {
+    color: hsl(130, 71%, 28%)
+}
+
+.redText,
+#computerScoreDisplay {
+    color: hsl(0, 65%, 30%)
+}
+
+#resetButton,
+#DarkMode {
+    font-size: 1rem;
+    background: hsl(249, 60%, 17%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 120px;
+    height: 60px;
+    align-self: center;
+}
+
+#resetButton:hover,
+#DarkMode:hover {
+    background-color: hsl(235, 55%, 8%);
+    transform: scale(1.05);
+}
+
+#resetButton:active,
+#DarkMode:active {
+    transform: scale(1);
+}
+
+body.dark-mode {
+    background: #121212;
+}
+
+body.dark-mode #game {
+    background: #1e1e1e;   
+    color: #e0e0e0;
+}
+
+body,
+#game {
+    transition: background 0.5s, color 0.5s;
+}
+
+body.dark-mode h1 {
+    color: #e0e0e0;
+}
+
+body.dark-mode #DarkMode,
+body.dark-mode #resetButton {
+    background: hsl(225, 100%, 20%);
+}
+
+body.dark-mode #DarkMode:hover,
+body.dark-mode #resetButton:hover {
+    background-color: hsl(225, 100%, 15%);
+}
+
+body.dark-mode .greenText,
+body.dark-mode #playerScoreDisplay {
+    color: hsl(130, 74%, 67%);
+}
+
+body.dark-mode .redText,
+body.dark-mode #computerScoreDisplay {
+    color: hsl(345, 79%, 54%);
+}
+
+body.dark-mode button {
+    background: hsl(214, 100%, 97%);
+}
+
+body.dark-mode button:hover {
+    background: hsl(213, 7%, 68%);
+}
+
+body.dark-mode h3{
+    color: #e0e0e0;
+}
